@@ -1,17 +1,6 @@
 import EventCard from '@/components/EventCard'
 import ExploreBtn from '@/components/ExploreBtn'
-
-const events = [
-  { image: '/images/event1.png', title: 'Tech Conference 2024' },
-  { image: '/images/event2.png', title: 'JavaScript Summit' },
-  { image: '/images/event3.png', title: 'AI & ML Expo' },
-  { image: '/images/event4.png', title: 'Web Dev Workshop' },
-  { image: '/images/event5.png', title: 'Cloud Computing Meetup' },
-  { image: '/images/event6.png', title: 'Cybersecurity Forum' },
-  { image: '/images/event1.png', title: 'Open Source Con' },
-  { image: '/images/event2.png', title: 'Mobile Dev Fest' },
-  { image: '/images/event3.png', title: 'Data Science Symposium' },
-]
+import { events } from '@/lib/constants'
 
 const Page = () => {
   return (
@@ -24,7 +13,7 @@ const Page = () => {
           <h3>
             Featured Events
           </h3>
-          <ul className='events'>
+          <ul className='events' id ='events'>
             {events.map((event) => (
               <li key={event.title}>
                 <EventCard {...event} />
